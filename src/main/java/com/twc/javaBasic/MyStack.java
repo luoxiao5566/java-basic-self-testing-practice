@@ -26,8 +26,13 @@ public class MyStack {
 
         // TODO: Please push the value into the storage here.
         // <--start
-        storage[count-1]=value;
+        if (count==0){
+            storage[0]=value;
+        }else {
+            storage[count]=value;
+        }
         count++;
+
         // --end-->
     }
 
@@ -42,6 +47,8 @@ public class MyStack {
         // <--start
         int[] temporaryArray = Arrays.copyOf(storage, newCapacity);
         storage = Arrays.copyOf(temporaryArray, newCapacity);
+        capacity=newCapacity;
+
         // --end-->
     }
 
@@ -63,7 +70,7 @@ public class MyStack {
         // <--start
         if (count>0){
             int ans=0;
-            ans=storage[count];
+            ans=storage[count-1];
             count--;
             return ans;
         }
