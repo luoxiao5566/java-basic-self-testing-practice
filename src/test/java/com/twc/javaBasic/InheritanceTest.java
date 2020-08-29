@@ -47,7 +47,7 @@ class InheritanceTest {
         //  You should write the answer directly.
         // Hint: https://beginnersbook.com/2014/01/method-overriding-in-java-with-example/
         // <--start
-        final String expectedName = "BaseClassForOverriding";
+        final String expectedName = "DerivedFromBaseClassForOverriding";
         // --end-->
 
         assertEquals(expectedName, instance.getName());
